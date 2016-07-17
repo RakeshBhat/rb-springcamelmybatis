@@ -1,17 +1,21 @@
-/*package com.springcamelmybatis.db.config;
+package com.springcamelmybatis.db.config;
 
-import javax.sql.DataSource;
-
-import org.mybatis.spring.SqlSessionFactoryBean;
-import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.camel.component.mybatis.MyBatisComponent;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.ClassPathResource;
 
 @Configuration
-@MapperScan("com.springcamelmybatis.db.mapper")
+//@MapperScan("com.springcamelmybatis.db.mapper")
 public class MybatisConfig {
+	
+	@Bean(name="mybatis")
+	public MyBatisComponent myBatisComponent( SqlSessionFactory sqlSessionFactory )
+	{
+	    MyBatisComponent result = new MyBatisComponent();
+	    result.setSqlSessionFactory( sqlSessionFactory );
+	    return result;
+	}
 	
 //	@Autowired
 //	DataSource dataSource;
@@ -33,4 +37,3 @@ public class MybatisConfig {
 //		this.dataSource = dataSource;
 //	}
 }
-*/

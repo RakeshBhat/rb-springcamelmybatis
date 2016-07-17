@@ -1,0 +1,1 @@
+ClaimInfo [clm_id=1234567890, typ_cde=abcd, clm_num=101989, cde=9000, comt_txt=abcd, mthd_cde=10mar1989]

@@ -10,8 +10,9 @@ public class CamelMybatisCRUDRoute extends RouteBuilder{
 	public void configure() throws Exception {
 		
 		from("mybatis:getClaimInfo?statementType=SelectOne")
-		.log("${body}")
-		.to("file:target/claiminfo.txt")
+		.log("Output from MyBatis: ${body}")
+		.convertBodyTo(String.class)
+		.to("file:target/claim/?fileName=claiminfo.txt")
 		.setTrace("true");
 		
 	}
