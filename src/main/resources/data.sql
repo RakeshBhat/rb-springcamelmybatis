@@ -1,2 +1,2 @@
-insert into clm_t values(1234567890, 'abcd', '101989', 9000, 'abcd', '10mar1989');
-insert into clm_t values(1234567899, 'dcba', '101990', 9000, 'bcda', '10mar1989');
+insert into books values(1234567890, 'abcd', 'rb', '2000', 'java spring', 'great 1mar');
+insert into books values(1234567899, 'dcba', 'sb', '2010', 'camel', 'good 10mar');
